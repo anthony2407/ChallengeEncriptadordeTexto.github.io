@@ -8,12 +8,20 @@ var resultado= document.querySelector(".texto-resultado");
 botonEncriptar.onclick = encriptar;
 botonDesencriptar.onclick=desencriptar;
 botonCopiar.onclick = copiarTexto;
+var area=document.querySelector(".area");
+
+
+function limpiar(){
+    return area.value="";
+}
+
 
 
 function encriptar(){
    
     ocultarAdelante();
     resultado.textContent=encriptarText(recuperarTexto());
+   limpiar();
     
    
   
@@ -23,7 +31,10 @@ function encriptar(){
 function desencriptar(){
   
     ocultarAdelante();
-    resultado.textContent=desencriptarText(recuperarTexto());}
+    resultado.textContent=desencriptarText(recuperarTexto());
+      limpiar();
+   
+}
     
 
 
