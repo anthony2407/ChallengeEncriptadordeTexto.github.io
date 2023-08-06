@@ -20,7 +20,7 @@ function limpiar(){
 function encriptar(){
    
     ocultarAdelante();
-    resultado.textContent=encriptarText(recuperarTexto());
+    resultado.textContent=encriptarText(recuperarTexto().toLowerCase());
    limpiar();
     
    
@@ -31,7 +31,7 @@ function encriptar(){
 function desencriptar(){
   
     ocultarAdelante();
-    resultado.textContent=desencriptarText(recuperarTexto());
+    resultado.textContent=desencriptarText(recuperarTexto().toLowerCase());
       limpiar();
    
 }
